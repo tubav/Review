@@ -9,7 +9,7 @@ review a paper or another thesis. Fortunately, one can find many hints,
 tipps, and checklist on the Internet.
 
 This project aims to provide a template that includes the above mentioned
-instructions.
+instructions and is basically using Matthias Rupp, "Review Checklist", 2008.
 
 Ticket system
 -------------
