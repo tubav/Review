@@ -21,7 +21,7 @@
 
 
 % basic config -----------------------------------------------------------------
-\usepackage{CJKutf8}                          % Japanese language support
+%\usepackage{CJKutf8}                          % Japanese language support
 %\usepackage[ngerman]{babel}                  % German language support
 %\usepackage{bibgerm}                         % German bibliography support
 %\usepackage{bibtopic}                        % Bibliography: use more than one
@@ -34,12 +34,12 @@
 \usepackage{listings}                         % Nicer listings
 \usepackage{ltxtable}                         % Long complex tables
 \usepackage{wallpaper}                        % To show an icon on the first page
-\usepackage{minitoc}                          % ToC for chapters
+%\usepackage{minitoc}                          % ToC for chapters
+%\dominitoc[n]                                 % No caption for mini ToCs
 \usepackage{enumitem}                         % For continuous enumerations
-\dominitoc[n]                                 % No caption for mini ToCs
 \addtokomafont{sectioning}{\rmfamily}         % Serifs in headings
-\ChNameVar{\Large\rm}                         % Fancy chapter with serifs
-\ChTitleVar{\Large\rm}                        % Fancy chapter with serifs
+\ChNameVar{\Large\rmfamily}                         % Fancy chapter with serifs
+\ChTitleVar{\Large\rmfamily}                        % Fancy chapter with serifs
 \renewcommand*{\acsfont}[1]{{\rmfamily{#1}}}
 %\renewcommand{\mtctitle}{Contents}
 \renewcommand{\lstlistlistingname}{List of Algorithms}
@@ -50,7 +50,7 @@
 
 
 % more config ------------------------------------------------------------------
-\usepackage[switch*,modulo]{lineno}  % Show line numbers
+%\usepackage[switch*,modulo]{lineno}  % Show line numbers
 \usepackage{lmodern}                 % Nicer fonts (for all)
 \usepackage{mathptmx}                % Nicer fonts (for all) - times
 %\usepackage[osf,sc]{mathpazo}       % Nicer fonts (for all) - palatino
@@ -58,7 +58,7 @@
 %\usepackage{courier}                % Nicer fonts (for text) - palatino
 %\usepackage{mathptmx}               % Nicer fonts (for math)
 %\usepackage{tocbibind}              % Show Table Of Content (TOC) in the TOC (do not use!)
-\usepackage[clearempty]{titlesec}    % Suppress header and footer for empty pages
+%\usepackage[clearempty]{titlesec}    % Suppress header and footer for empty pages
 \usepackage{lipsum}                  % To add some dummy text
 \usepackage{makeidx}                 % Make an index
 \makeindex                           % Make an index
@@ -124,7 +124,7 @@ Na-tur-wis-sen-schaft-lich-en}
 \newcommand{\metaDate}{30.~September~2012}
 \newcommand{\metaDateExam}{30.~September~2012}
 \newcommand{\metaNumber}{2012-09}
-\newcommand{\metaTitle}{Paper Title}
+\newcommand{\metaTitle}{todo: Paper Title}
 \newcommand{\metaTitleShort}{\metaTitle}
 \newcommand{\metaDegree}{M.Tmpl.}
 \newcommand{\metaBirthplace}{Birthplace}
@@ -182,6 +182,35 @@ Thank you for...}
 %    \vskip 0\p@
 %  }}
 %\makeatother
+% ------------------------------------------------------------------------------
+
+% hyperlinks (almost last package) ----------------------------------------------------
+\usepackage[pdftex,                   % Hyperlinks in PDFs
+raiselinks=true,			          % calculate real height of the link
+breaklinks,                           % break links
+%backref=page,                         % backlinks in bibliography (section, slide, page, none)
+%pagebackref=true,                     % backlinks in bibliography
+hyperindex=true,                      % backlinkex index
+linktocpage=true,                     % ToC links pages
+bookmarks=true,                       % Bookmarks for PDF viewers
+bookmarksopen=true,                   % Open bookmarks
+bookmarksopenlevel=1,                 % How many levels to open
+bookmarksnumbered=true,               % Numbers in the bookmarks
+bookmarkstype=toc,                    % Type of bookmark
+plainpages=false,                     % Anchors even on plain pages?
+pageanchor=true,                      % Pages are linkable
+pdfstartview=FitH,                    % Open document with Fit Width
+pdfpagelabels=true,                   % set PDF page labels
+pdfpagemode=UseOutlines,              % Show bookmarks in viewer
+colorlinks,                           % Show colored links
+linkcolor=LinkColor,                  % Link color
+urlcolor=LinkColor,                   % URL color
+anchorcolor=LinkColor,                % Anchor color
+citecolor=LinkColor,                  % Cite color
+menucolor=LinkColor,                  % Menu color
+hypertexnames=true                    % Whatever ;)
+]{hyperref}                           % Use hyperlinks
+%\renewcommand*{\backref}[1]{[cited at page #1]} % Show formatted backlinks
 % ------------------------------------------------------------------------------
 
 
